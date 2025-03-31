@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Silver Pearl</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    body {
+      background: black;
+    }
+    img.fullscreen {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Silver Pearl</h1>
-  <p>Your image hosting is working!</p>
-  <img src="sp.png" alt="My Image">
+  <img src="sp.png" alt="Fullscreen Image" class="fullscreen">
 </body>
 </html>
