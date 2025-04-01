@@ -3,32 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>Silver Pearl</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
   <style>
-    html, body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
       height: 100%;
+      width: 100%;
       background-color: #000;
       font-family: 'Playfair Display', serif;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .tagline {
-      position: absolute;
-      top: 30px;
-      width: 100%;
       text-align: center;
-      font-size: 1.8rem;
       color: #e0c38e;
-      text-shadow: 1px 1px 5px #000;
-      animation: fadeInDown 1.5s ease-out;
-      letter-spacing: 1px;
+      font-size: 1.5rem;
+      text-shadow: 1px 1px 4px #000;
+      padding: 10px;
+      animation: fadeIn 1.5s ease-out;
     }
 
-    @keyframes fadeInDown {
+    .image-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 10px;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @keyframes fadeIn {
       from {
         opacity: 0;
-        transform: translateY(-30px);
+        transform: translateY(-20px);
       }
       to {
         opacity: 1;
@@ -36,28 +59,17 @@
       }
     }
 
-    .centered-image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      box-sizing: border-box;
-      padding-top: 60px; /* space for the tagline */
-    }
-
-    .centered-image img {
-      max-width: 100%;
-      max-height: 90%;
-      object-fit: contain;
+    @media (max-height: 500px) {
+      .tagline {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="tagline">
-    Discover your shine with Silver Pearl – jewelry that speaks you.
-  </div>
-  <div class="centered-image">
-    <img src="sp.png" alt="Silver Pearl Coming Soon">
+  <div class="tagline">Discover your shine with Silver Pearl – jewelry that speaks you.</div>
+  <div class="image-container">
+    <img src="sp.png" alt="Silver Pearl Logo">
   </div>
 </body>
 </html>
